@@ -1,0 +1,19 @@
+[0;1;31m●[0m apache2.service - LSB: Apache2 web server
+   Loaded: loaded (/etc/init.d/apache2; bad; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2018-11-07 21:47:47 UTC; 10s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 6537 ExecStop=/etc/init.d/apache2 stop (code=exited, status=0/SUCCESS)
+  Process: 6670 ExecStart=/etc/init.d/apache2 start [0;1;31m(code=exited, status=1/FAILURE)[0m
+
+Nov 07 21:47:47 ip-172-31-68-139 apache2[6670]:  *
+Nov 07 21:47:47 ip-172-31-68-139 apache2[6670]:  * The apache2 configtest failed.
+Nov 07 21:47:47 ip-172-31-68-139 apache2[6670]: Output of config test was:
+Nov 07 21:47:47 ip-172-31-68-139 apache2[6670]: apache2: Syntax error on line 219 of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/sites-enabled/tland-dev.karaokulta.com-le-ssl.conf: No such file or directory
+Nov 07 21:47:47 ip-172-31-68-139 apache2[6670]: Action 'configtest' failed.
+Nov 07 21:47:47 ip-172-31-68-139 apache2[6670]: The Apache error log may have more information.
+Nov 07 21:47:47 ip-172-31-68-139 systemd[1]: [0;1;39mapache2.service: Control process exited, code=exited status=1[0m
+Nov 07 21:47:47 ip-172-31-68-139 systemd[1]: [0;1;31mFailed to start LSB: Apache2 web server.[0m
+Nov 07 21:47:47 ip-172-31-68-139 systemd[1]: [0;1;39mapache2.service: Unit entered failed state.[0m
+Nov 07 21:47:47 ip-172-31-68-139 systemd[1]: [0;1;39mapache2.service: Failed with result 'exit-code'.[0m
